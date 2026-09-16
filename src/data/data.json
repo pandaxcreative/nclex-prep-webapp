@@ -1,0 +1,302 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "category": "Prioritization",
+      "question": "Which of the following 4 patients should the nurse see FIRST?",
+      "options": [
+        { "text": "A post-op patient with 8/10 pain requesting analgesia.", "isCorrect": false },
+        { "text": "A child with asthma whose wheezing has suddenly stopped with a silent chest.", "isCorrect": true },
+        { "text": "A diabetic patient with blood glucose of 220 mg/dL before lunch.", "isCorrect": false },
+        { "text": "A patient waiting for discharge instructions to leave for home.", "isCorrect": false }
+      ],
+      "rationale": "A silent chest in an asthma exacerbation indicates severe airway constriction with minimal or no air movement, heralding impending respiratory arrest. Airway (A) in the ABC priority framework is always addressed before pain or elevated blood glucose without acute distress.",
+      "hint": "Think about the ABC rule. Who has an acute, life-threatening airway compromise and will decompensate first without immediate intervention?"
+    },
+    {
+      "id": 2,
+      "category": "Prioritization",
+      "question": "The medical-surgical nurse receives report on four clients. Which client requires IMMEDIATE assessment?",
+      "options": [
+        { "text": "A client 1 day post-thyroidectomy reporting tingling around the mouth and fingers.", "isCorrect": true },
+        { "text": "A client with chronic kidney disease whose baseline hemoglobin is 9.2 g/dL.", "isCorrect": false },
+        { "text": "A client with heart failure with +2 bilateral pedal edema and clear lung sounds.", "isCorrect": false },
+        { "text": "A client with pneumonia who has a temperature of 101.2°F (38.4°C) and productive cough.", "isCorrect": false }
+      ],
+      "rationale": "Perioral numbness and paresthesia of the fingers following a thyroidectomy indicate accidental damage or removal of the parathyroid glands, resulting in acute hypocalcemia. This can swiftly progress to tetany, laryngospasm, seizures, and cardiac dysrhythmias.",
+      "hint": "Look for post-surgical complications involving calcium regulation. Which symptom warns of impending tetany or airway laryngospasm?"
+    },
+    {
+      "id": 3,
+      "category": "Pharmacology",
+      "question": "A client is prescribed furosemide 40 mg IV push. Which lab value should the nurse review before administering the dose?",
+      "options": [
+        { "text": "Serum potassium level.", "isCorrect": true },
+        { "text": "Serum amylase level.", "isCorrect": false },
+        { "text": "Fasting blood glucose.", "isCorrect": false },
+        { "text": "Serum troponin I.", "isCorrect": false }
+      ],
+      "rationale": "Furosemide is a potent loop diuretic that wastes potassium in the urine. Administering furosemide in the presence of hypokalemia (<3.5 mEq/L) can trigger life-threatening ventricular arrhythmias, muscle weakness, and digitalis toxicity.",
+      "hint": "Furosemide acts on the Loop of Henle and washes out electrolytes. Which electrolyte drop triggers dangerous cardiac arrhythmias?"
+    },
+    {
+      "id": 4,
+      "category": "Pharmacology",
+      "question": "A client taking lithium carbonate for bipolar disorder reports persistent nausea, coarse hand tremors, ataxia, and confusion. What is the nurse's priority action?",
+      "options": [
+        { "text": "Withhold the next dose and immediately notify the provider for a stat serum lithium level.", "isCorrect": true },
+        { "text": "Reassure the client that coarse tremors are an expected temporary side effect.", "isCorrect": false },
+        { "text": "Administer an antiemetic and encourage fluid restriction.", "isCorrect": false },
+        { "text": "Request a dosage increase due to worsening manic symptoms.", "isCorrect": false }
+      ],
+      "rationale": "Coarse tremors, ataxia, confusion, and persistent gastrointestinal distress are hallmark indicators of lithium toxicity (lithium level >1.5 mEq/L; normal therapeutic range is 0.6-1.2 mEq/L). The priority is withholding further medication and checking serum drug levels.",
+      "hint": "Differentiate between fine tremor (expected mild side effect) and coarse tremor with neurological deficits (toxic emergency)."
+    },
+    {
+      "id": 5,
+      "category": "Safe & Effective Care",
+      "question": "Which nursing task is most appropriate to delegate to an Unlicensed Assistive Personnel (UAP)?",
+      "options": [
+        { "text": "Measuring and recording urine output from a Foley catheter collection bag.", "isCorrect": true },
+        { "text": "Evaluating the effectiveness of a patient's pain medication.", "isCorrect": false },
+        { "text": "Providing discharge instructions regarding wound dressing care.", "isCorrect": false },
+        { "text": "Administering oral antihypertensive medications to a stable client.", "isCorrect": false }
+      ],
+      "rationale": "UAPs can perform routine, non-invasive tasks with predictable outcomes such as vital signs, hygiene, and recording output. Delegation rules state the RN CANNOT delegate: Assessment, Teaching, Evaluation, or Nursing Judgment (EAT framework: Evaluate, Assess, Teach).",
+      "hint": "Remember the delegation mnemonic: Do NOT delegate what you can EAT (Evaluate, Assess, Teach)."
+    },
+    {
+      "id": 6,
+      "category": "Prioritization",
+      "question": "After receiving handover from the night nurse, which patient should the nurse assess FIRST?",
+      "options": [
+        { "text": "A client with deep vein thrombosis (DVT) who suddenly develops acute shortness of breath and pleuritic chest pain.", "isCorrect": true },
+        { "text": "A client with a gastrointestinal bleed with dark tarry stool and stable vital signs.", "isCorrect": false },
+        { "text": "A client with cellulitis of the left leg with marked erythema and warmth.", "isCorrect": false },
+        { "text": "A client with a fractured tibia awaiting an orthopedic consult with mild swelling.", "isCorrect": false }
+      ],
+      "rationale": "Sudden onset dyspnea and chest pain in a client with DVT strongly suggests a pulmonary embolism (PE), an acute, life-threatening circulatory and respiratory emergency that requires immediate triage and oxygenation.",
+      "hint": "Apply the 'Unexpected vs Expected' & 'Circulation/Airway' rules. A clot that has traveled to the pulmonary vasculature is a medical code priority."
+    },
+    {
+      "id": 7,
+      "category": "Physiological Adaptation",
+      "question": "A client with a closed head injury shows bradycardia (pulse 48 bpm), irregular respirations, and a widening pulse pressure (BP 188/60 mmHg). The nurse recognizes these findings as:",
+      "options": [
+        { "text": "Cushing's Triad, indicating critically increased intracranial pressure (ICP).", "isCorrect": true },
+        { "text": "Beck's Triad, indicating cardiac tamponade.", "isCorrect": false },
+        { "text": "Septic shock with compensatory systemic response.", "isCorrect": false },
+        { "text": "Autonomic dysreflexia secondary to spinal cord injury.", "isCorrect": false }
+      ],
+      "rationale": "Cushing's Triad consists of hypertension with widened pulse pressure, bradycardia, and irregular/Cheyne-Stokes respirations. It is a late and ominous sign of brainstem herniation caused by severely increased ICP (the opposite of hypovolemic shock vitals).",
+      "hint": "Contrast shock (tachycardia, hypotension, tachypnea) with increased ICP. Which triad features bradycardia and widened pulse pressure?"
+    },
+    {
+      "id": 8,
+      "category": "Reduction of Risk",
+      "question": "A nurse is caring for a client receiving IV magnesium sulfate for severe preeclampsia. Which finding requires IMMEDIATE discontinuation of the infusion?",
+      "options": [
+        { "text": "Deep tendon reflexes (DTRs) of 0 (absent patellar reflex) and respiratory rate of 10 breaths/min.", "isCorrect": true },
+        { "text": "Blood pressure reading of 142/90 mmHg.", "isCorrect": false },
+        { "text": "Urine output of 45 mL/hour.", "isCorrect": false },
+        { "text": "Client complaint of facial flushing and a warm sensation.", "isCorrect": false }
+      ],
+      "rationale": "Loss of deep tendon reflexes and respiratory depression (<12/min) are key signs of magnesium toxicity. The nurse must stop the infusion immediately and prepare the antidote: Calcium Gluconate.",
+      "hint": "Magnesium is a central nervous system depressant. Watch for hyporeflexia and hypoventilation."
+    },
+    {
+      "id": 9,
+      "category": "Pharmacology",
+      "question": "A client is prescribed digoxin 0.25 mg daily. The nurse holds the medication and alerts the physician after observing which symptom?",
+      "options": [
+        { "text": "Visual disturbances with yellow/green halos and anorexia.", "isCorrect": true },
+        { "text": "Apical pulse of 76 beats per minute.", "isCorrect": false },
+        { "text": "Mild dry cough with throat tickle.", "isCorrect": false },
+        { "text": "Weight gain of 0.5 lbs over two weeks.", "isCorrect": false }
+      ],
+      "rationale": "Yellow-green halos around lights, blurred vision, anorexia, nausea, vomiting, and bradycardia (<60 bpm) are classic signs of digitalis toxicity. Normal therapeutic digoxin level is 0.5-2.0 ng/mL. Hypokalemia increases susceptibility to digoxin toxicity.",
+      "hint": "What distinct sensory and visual changes occur when cardiac glycoside blood levels become dangerously elevated?"
+    },
+    {
+      "id": 10,
+      "category": "Prioritization",
+      "question": "The nurse is prioritizing morning care. Which client scenario represents the highest clinical priority?",
+      "options": [
+        { "text": "A client with acute pancreatitis reporting sudden severe epigastric pain that radiates to the back.", "isCorrect": false },
+        { "text": "A client with an abdominal aortic aneurysm (AAA) who suddenly develops tearing lower back pain and diaphoresis.", "isCorrect": true },
+        { "text": "A client with rheumatoid arthritis reporting morning stiffness lasting 45 minutes.", "isCorrect": false },
+        { "text": "A client with hepatitis B whose sclerae appear jaundiced.", "isCorrect": false }
+      ],
+      "rationale": "Tearing lower back or flank pain in a client with a known AAA is a hallmark warning sign of aneurysm expansion or impending catastrophic rupture, leading to hypovolemic shock and death within minutes.",
+      "hint": "Differentiate between expected pathology (pancreatitis epigastric pain, hepatitis jaundice) vs catastrophic vascular rupture."
+    },
+    {
+      "id": 11,
+      "category": "Safe & Effective Care",
+      "question": "A nurse enters a room and finds a trash can fire with small flames. According to the RACE protocol, what is the FIRST action the nurse must take?",
+      "options": [
+        { "text": "Rescue and evacuate the client from immediate danger.", "isCorrect": true },
+        { "text": "Activate the hospital fire alarm.", "isCorrect": false },
+        { "text": "Confine the fire by closing doors and windows.", "isCorrect": false },
+        { "text": "Extinguish the fire using a nearby Class ABC fire extinguisher.", "isCorrect": false }
+      ],
+      "rationale": "Under the RACE fire safety acronym (Rescue, Alarm, Confine, Extinguish/Evacuate), the nurse's first and immediate priority is always to Rescue any individual in direct danger before sounding the alarm.",
+      "hint": "Remember R-A-C-E. The letter 'R' comes first for human safety."
+    },
+    {
+      "id": 12,
+      "category": "Pharmacology",
+      "question": "Which medication is the designated antidote for a client experiencing severe respiratory depression secondary to an opioid overdose?",
+      "options": [
+        { "text": "Naloxone (Narcan).", "isCorrect": true },
+        { "text": "Flumazenil.", "isCorrect": false },
+        { "text": "Protamine sulfate.", "isCorrect": false },
+        { "text": "Vitamin K (Phytonadione).", "isCorrect": false }
+      ],
+      "rationale": "Naloxone is an opioid receptor antagonist used to reverse life-threatening opioid-induced central nervous system and respiratory depression. (Flumazenil is for benzodiazepines; Protamine sulfate for heparin; Vitamin K for warfarin).",
+      "hint": "Match the specific antagonist used in emergency room protocols to reverse fentanyl, morphine, or oxycodone toxicity."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": 101,
+      "type": "Lab Value",
+      "front": "Serum Potassium (K+)",
+      "back": "3.5 – 5.0 mEq/L",
+      "notes": "Critical for cardiac electrical conduction. Hypokalemia causes U-waves; Hyperkalemia causes peaked T-waves."
+    },
+    {
+      "id": 102,
+      "type": "Lab Value",
+      "front": "Serum Sodium (Na+)",
+      "back": "135 – 145 mEq/L",
+      "notes": "Maintains fluid balance. Severe alterations (<120 or >160) carry high risk of cerebral edema, seizures, and coma."
+    },
+    {
+      "id": 103,
+      "type": "Lab Value",
+      "front": "Total Serum Calcium (Ca2+)",
+      "back": "8.5 – 10.5 mg/dL",
+      "notes": "Hypocalcemia = positive Chvostek's & Trousseau's signs, tetany, prolonged QT interval."
+    },
+    {
+      "id": 104,
+      "type": "Lab Value",
+      "front": "Serum Magnesium (Mg2+)",
+      "back": "1.5 – 2.5 mEq/L",
+      "notes": "Hypomagnesemia triggers Torsades de Pointes; Hypermagnesemia depresses DTRs and respiration."
+    },
+    {
+      "id": 105,
+      "type": "Lab Value",
+      "front": "Serum Creatinine",
+      "back": "0.6 – 1.2 mg/dL",
+      "notes": "Best indicator of kidney function. More specific than BUN for acute kidney injury."
+    },
+    {
+      "id": 106,
+      "type": "Lab Value",
+      "front": "Blood Urea Nitrogen (BUN)",
+      "back": "10 – 20 mg/dL",
+      "notes": "Elevated BUN with normal creatinine points to dehydration or upper GI bleed."
+    },
+    {
+      "id": 107,
+      "type": "Lab Value",
+      "front": "Hemoglobin (Hgb)",
+      "back": "Female: 12 – 16 g/dL\nMale: 14 – 18 g/dL",
+      "notes": "NCLEX general rule of thumb: <8 g/dL frequently triggers transfusion evaluation."
+    },
+    {
+      "id": 108,
+      "type": "Lab Value",
+      "front": "Platelets",
+      "back": "150,000 – 400,000 /mm³",
+      "notes": "Thrombocytopenia: <50,000 = bleeding precautions; <20,000 = spontaneous hemorrhage risk."
+    },
+    {
+      "id": 109,
+      "type": "Lab Value",
+      "front": "White Blood Cells (WBC)",
+      "back": "5,000 – 10,000 /mm³",
+      "notes": "Leukocytosis (>10,000) suggests infection or inflammation; Leukopenia (<4,000) requires neutropenic precautions."
+    },
+    {
+      "id": 110,
+      "type": "Drug Suffix",
+      "front": "-pril (e.g., Lisinopril, Enalapril)",
+      "back": "ACE Inhibitors",
+      "notes": "Antihypertensive. Watch for dry nagging cough, hyperkalemia, and rare life-threatening angioedema."
+    },
+    {
+      "id": 111,
+      "type": "Drug Suffix",
+      "front": "-olol (e.g., Metoprolol, Atenolol)",
+      "back": "Beta-Blockers",
+      "notes": "Lowers heart rate & BP. Hold if HR <60 bpm or SBP <100. Non-selective beta-blockers contraindicated in asthma."
+    },
+    {
+      "id": 112,
+      "type": "Drug Suffix",
+      "front": "-sartan (e.g., Losartan, Valsartan)",
+      "back": "Angiotensin II Receptor Blockers (ARBs)",
+      "notes": "Alternative to ACE inhibitors. Does NOT cause dry cough, but monitor for hyperkalemia and renal function."
+    },
+    {
+      "id": 113,
+      "type": "Drug Suffix",
+      "front": "-dipine (e.g., Amlodipine, Nifedipine)",
+      "back": "Dihydropyridine Calcium Channel Blockers",
+      "notes": "Vasodilation & BP control. Watch for peripheral ankle edema, dizziness, and gingival hyperplasia."
+    },
+    {
+      "id": 114,
+      "type": "Drug Suffix",
+      "front": "-statin (e.g., Atorvastatin, Simvastatin)",
+      "back": "HMG-CoA Reductase Inhibitors",
+      "notes": "Cholesterol lowering. Teach patient to report muscle aches or dark urine immediately (Rhabdomyolysis)."
+    },
+    {
+      "id": 115,
+      "type": "Drug Suffix",
+      "front": "-prazole (e.g., Omeprazole, Pantoprazole)",
+      "back": "Proton Pump Inhibitors (PPIs)",
+      "notes": "Suppresses gastric acid. Long-term use associated with osteoporosis/fractures, hypomagnesemia, and C. diff."
+    },
+    {
+      "id": 116,
+      "type": "Therapeutic Level",
+      "front": "Digoxin Therapeutic Range",
+      "back": "0.5 – 2.0 ng/mL",
+      "notes": "Toxicity signs: Anorexia, nausea, bradycardia, yellow-green halos. Hypokalemia increases toxicity."
+    },
+    {
+      "id": 117,
+      "type": "Therapeutic Level",
+      "front": "Lithium Therapeutic Range",
+      "back": "0.6 – 1.2 mEq/L",
+      "notes": "Toxicity signs: Coarse tremor, confusion, ataxia, tinnitus. Maintain stable sodium intake and hydration."
+    },
+    {
+      "id": 118,
+      "type": "Emergency Antidote",
+      "front": "Heparin Antidote",
+      "back": "Protamine Sulfate",
+      "notes": "Monitor aPTT (normal ~30-40s; therapeutic 1.5 - 2.5x baseline)."
+    },
+    {
+      "id": 119,
+      "type": "Emergency Antidote",
+      "front": "Warfarin (Coumadin) Antidote",
+      "back": "Vitamin K (Phytonadione)",
+      "notes": "Monitor PT/INR (normal INR ~0.8-1.1; therapeutic ~2.0-3.0; mechanical valves 2.5-3.5)."
+    },
+    {
+      "id": 120,
+      "type": "Emergency Antidote",
+      "front": "Acetaminophen (Tylenol) Antidote",
+      "back": "N-Acetylcysteine (Mucomyst)",
+      "notes": "Prevents severe hepatic necrosis if given within 8-10 hours of overdose."
+    }
+  ]
+}
