@@ -39,11 +39,16 @@ export interface Flashcard {
 export interface CheatSheetEntry {
   id: string;
   title: string;
-  category: 'Priority Rules' | 'Key Vocabulary' | 'Essential Mnemonics';
-  summary: string;
-  clinicalRule: string;
-  examples: string[];
-  keyTakeaway: string;
+  category: 'Priority Rules' | 'Key Vocabulary' | 'Essential Mnemonics' | 'High-Alert Meds' | 'Assessment Signs' | 'Clinical Procedures' | string;
+  importanceRank: number;
+  frequencyTier: 'Vital / Emergency' | 'High Frequency' | 'Core NCLEX' | 'Clinical Specialty' | string;
+  summary?: string;
+  meaning?: string;
+  clinicalRule?: string;
+  detailedUsage?: string;
+  nclexAlert?: string;
+  examples?: string[];
+  keyTakeaway?: string;
 }
 
 export interface QuizSessionState {

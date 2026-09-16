@@ -14,7 +14,7 @@ import {
   Award
 } from 'lucide-react';
 import { UserProgress, ActiveTab } from '../types';
-import { flashcardsData, nclexQuestions } from '../data/nclexData';
+import { flashcardsData, nclexQuestions, cheatSheetEntries } from '../data/nclexData';
 
 interface DashboardProps {
   progress: UserProgress;
@@ -178,6 +178,48 @@ export const Dashboard: React.FC<DashboardProps> = ({
             className="bg-indigo-600 h-full rounded-full transition-all duration-500"
             style={{ width: `${flashcardMasteryPercent}%` }}
           />
+        </div>
+      </div>
+
+      {/* High-Yield Bank Diversity & Scale Overview */}
+      <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-2xs space-y-3">
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+            <BookOpen className="w-4 h-4 text-sky-600" />
+            Genel İçerik & Soru Bankası Havuzu
+          </h3>
+          <span className="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-black border border-emerald-200">
+            2,050+ Toplam Materyal
+          </span>
+        </div>
+
+        <div className="grid grid-cols-3 gap-2 text-center">
+          <button
+            onClick={() => setActiveTab('quiz')}
+            className="p-3 rounded-xl bg-sky-50/60 border border-sky-100 hover:bg-sky-100/60 transition-colors cursor-pointer text-left"
+          >
+            <div className="text-lg font-black text-sky-900">{nclexQuestions.length}</div>
+            <div className="text-[11px] font-bold text-sky-700">NCLEX Soru</div>
+            <div className="text-[9px] text-sky-500 mt-0.5">NGN & Çözümlü</div>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('flashcards')}
+            className="p-3 rounded-xl bg-indigo-50/60 border border-indigo-100 hover:bg-indigo-100/60 transition-colors cursor-pointer text-left"
+          >
+            <div className="text-lg font-black text-indigo-900">{flashcardsData.length}</div>
+            <div className="text-[11px] font-bold text-indigo-700">Flashcard</div>
+            <div className="text-[9px] text-indigo-500 mt-0.5">İlaç, Lab & Panzehir</div>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('cheatsheet')}
+            className="p-3 rounded-xl bg-amber-50/60 border border-amber-100 hover:bg-amber-100/60 transition-colors cursor-pointer text-left"
+          >
+            <div className="text-lg font-black text-amber-900">{cheatSheetEntries.length}</div>
+            <div className="text-[11px] font-bold text-amber-700">Cheat Sheet</div>
+            <div className="text-[9px] text-amber-500 mt-0.5">Önem Sıralı & Detaylı</div>
+          </button>
         </div>
       </div>
 
