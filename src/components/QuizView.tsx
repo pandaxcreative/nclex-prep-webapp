@@ -12,11 +12,15 @@ import {
   ChevronDown,
   ChevronUp,
   Layers,
-  Filter
+  Filter,
+  Zap,
+  Loader2
 } from 'lucide-react';
 import { NCLEXQuestion, QuestionCategory } from '../types';
 import { getRandomQuestions, nclexQuestions } from '../data/nclexData';
 import { soundEngine } from '../utils/audio';
+import { AITutorModal } from './AITutorModal';
+import { aiService } from '../services/aiService';
 
 interface QuizViewProps {
   onRecordAnswer: (category: string, isCorrect: boolean) => void;
@@ -49,6 +53,13 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
   const [expandedReviewId, setExpandedReviewId] = useState<number | null>(null);
 
+  // AI Modal and Generation States
+  const [isTutorOpen, setIsTutorOpen] = useState<boolean>(false);
+  const [tutorQuestion, setTutorQuestion] = useState<NCLEXQuestion | null>(null);
+  const [tutorSelectedOption, setTutorSelectedOption] = useState<number | null>(null);
+  const [isGeneratingAI, setIsGeneratingAI] = useState<boolean>(false);
+  const [aiGeneratedSuccessNotice, setAiGeneratedSuccessNotice] = useState<string | null>(null);
+
   // Initialize a new 5-question session
   const startNewQuiz = (category: string = selectedCategory) => {
     const fresh = getRandomQuestions(5, category === 'All' ? undefined : category);
@@ -65,6 +76,35 @@ export const QuizView: React.FC<QuizViewProps> = ({
   useEffect(() => {
     startNewQuiz(selectedCategory);
   }, [selectedCategory]);
+
+  const handleOpenTutor = (question: NCLEXQuestion, selectedIdx: number | null) => {
+    setTutorQuestion(question);
+    setTutorSelectedOption(selectedIdx);
+    setIsTutorOpen(true);
+  };
+
+  const handleGenerateAIQuestion = async () => {
+    setIsGeneratingAI(true);
+    setAiGeneratedSuccessNotice(null);
+    try {
+      const targetCategory = selectedCategory === 'All' ? 'Prioritization' : selectedCategory;
+      const res = await aiService.generateQuestion(targetCategory, 'Next-Gen NCLEX Clinical Scenario');
+      if (res.question) {
+        // Prepend AI-generated question into the current set
+        setQuestions((prev) => [res.question, ...prev]);
+        setCurrentIndex(0);
+        setSelectedOptionIndex(null);
+        setIsSubmitted(false);
+        setShowHint(false);
+        setAiGeneratedSuccessNotice(`Generated fresh question via ${res.source}!`);
+        setTimeout(() => setAiGeneratedSuccessNotice(null), 4000);
+      }
+    } catch (err) {
+      console.error('Failed to generate AI question:', err);
+    } finally {
+      setIsGeneratingAI(false);
+    }
+  };
 
   const currentQuestion = questions[currentIndex];
 
@@ -282,12 +322,28 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       </span>
                       {item.question.rationale}
                     </div>
+
+                    <button
+                      onClick={() => handleOpenTutor(item.question, item.selectedIndex)}
+                      className="w-full py-2 px-3 rounded-lg bg-amber-50 hover:bg-amber-100 border border-amber-200 text-amber-900 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-amber-600 fill-amber-500" />
+                      <span>Ask Nurse Mentor AI about Q{idx + 1}</span>
+                    </button>
                   </div>
                 )}
               </div>
             );
           })}
         </div>
+
+        {/* AI Tutor Modal */}
+        <AITutorModal
+          isOpen={isTutorOpen}
+          onClose={() => setIsTutorOpen(false)}
+          question={tutorQuestion}
+          selectedOptionIndex={tutorSelectedOption}
+        />
       </div>
     );
   }
@@ -295,7 +351,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   // --- ACTIVE QUIZ QUESTION VIEW ---
   return (
     <div className="max-w-xl mx-auto px-4 py-4 pb-24 space-y-4">
-      {/* Category Pills Header */}
+      {/* Category Pills Header & AI Generator */}
       <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
         {categories.map((cat) => (
           <button
@@ -310,7 +366,28 @@ export const QuizView: React.FC<QuizViewProps> = ({
             {cat.label}
           </button>
         ))}
+
+        <button
+          onClick={handleGenerateAIQuestion}
+          disabled={isGeneratingAI}
+          className="px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap transition-colors cursor-pointer bg-amber-500 hover:bg-amber-600 text-white shadow-xs flex items-center gap-1.5 disabled:opacity-50 ml-auto"
+        >
+          {isGeneratingAI ? (
+            <Loader2 className="w-3.5 h-3.5 animate-spin" />
+          ) : (
+            <Sparkles className="w-3.5 h-3.5 text-amber-100 fill-amber-200" />
+          )}
+          <span>+ AI Question (Groq)</span>
+        </button>
       </div>
+
+      {/* AI Generated Success Notice */}
+      {aiGeneratedSuccessNotice && (
+        <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-900 flex items-center gap-2 animate-fadeIn">
+          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+          <span>{aiGeneratedSuccessNotice}</span>
+        </div>
+      )}
 
       {/* Progress & Question Counter */}
       <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-xs space-y-3">
@@ -443,6 +520,15 @@ export const QuizView: React.FC<QuizViewProps> = ({
             </div>
           </div>
 
+          {/* Ask AI Nurse Tutor CTA */}
+          <button
+            onClick={() => handleOpenTutor(currentQuestion, selectedOptionIndex)}
+            className="w-full py-2.5 px-4 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-950 font-bold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-2xs"
+          >
+            <Sparkles className="w-4 h-4 text-amber-600 fill-amber-500" />
+            <span>Ask Nurse Tutor AI (Why are distractors wrong?)</span>
+          </button>
+
           <button
             onClick={handleNext}
             className="w-full py-3 px-4 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
@@ -454,6 +540,14 @@ export const QuizView: React.FC<QuizViewProps> = ({
           </button>
         </div>
       )}
+
+      {/* AI Tutor Modal */}
+      <AITutorModal
+        isOpen={isTutorOpen}
+        onClose={() => setIsTutorOpen(false)}
+        question={tutorQuestion}
+        selectedOptionIndex={tutorSelectedOption}
+      />
     </div>
   );
 };

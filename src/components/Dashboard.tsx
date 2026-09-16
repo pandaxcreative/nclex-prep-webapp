@@ -86,6 +86,34 @@ export const Dashboard: React.FC<DashboardProps> = ({
         <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-white/5 rounded-full blur-2xl pointer-events-none" />
       </div>
 
+      {/* AI Clinical Mentor Banner */}
+      <div className="bg-amber-50/80 border border-amber-200/80 rounded-2xl p-4 shadow-2xs flex items-center justify-between gap-3">
+        <div className="flex items-start gap-3">
+          <div className="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+            <Sparkles className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h3 className="text-xs sm:text-sm font-black text-slate-900">
+                AI Clinical Mentor & NGN Generator
+              </h3>
+              <span className="px-2 py-0.5 rounded-full bg-amber-200 text-amber-900 text-[10px] font-bold">
+                Groq Fast LPU
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-600 mt-0.5 leading-relaxed">
+              Real-time ABC & ADPIE clinical judgment rationales, distractor breakdowns, and on-demand practice drills.
+            </p>
+          </div>
+        </div>
+        <button
+          onClick={() => setActiveTab('quiz')}
+          className="flex-shrink-0 px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition-colors cursor-pointer shadow-2xs"
+        >
+          Try AI Drill
+        </button>
+      </div>
+
       {/* Core Gamified Stats Grid */}
       <div className="grid grid-cols-3 gap-2.5">
         {/* Streak */}
